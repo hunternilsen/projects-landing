@@ -24,8 +24,8 @@ Single-page interactive project portfolio for Hunter Nilsen. Static HTML/CSS/JS 
 - Respects `prefers-reduced-motion`
 
 ## Deployment
-- GitHub Pages: https://hunternilsen.github.io/projects-landing/
-- Repo: https://github.com/hunternilsen/projects-landing
+- GitHub Pages: https://hunternilsen.github.io/portfolio-landing/
+- Repo: https://github.com/hunternilsen/portfolio-landing
 - Also deployable as a Domo Custom App via `manifest.json`
 
 ## Content Updates

@@ -2,7 +2,7 @@
 
 A personal portfolio showcasing RevOps and AD Ops projects at Domo, built as a static single-page site with filtering, scroll animations, and a University of Utah color theme.
 
-**Live:** [hunternilsen.github.io/projects-landing](https://hunternilsen.github.io/projects-landing/)
+**Live:** [hunternilsen.github.io/portfolio-landing](https://hunternilsen.github.io/portfolio-landing/)
 
 ## Projects Featured
 
