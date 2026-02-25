@@ -13,6 +13,7 @@ window.PROJECT_DATA = [
     tags: ["Executive Dashboard"],
     impactAreas: ["Leadership Decision-Making", "Pipeline Health Monitoring"],
     summary: "Executive dashboard used by CMO, CRO, and RevOps leadership to monitor pipeline health and identify stalled deals.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Executive visibility into pipeline health and deal velocity.",
@@ -38,6 +39,7 @@ window.PROJECT_DATA = [
     tags: ["Leadership Dashboard"],
     impactAreas: ["Sales Performance Management", "Marketing Attribution"],
     summary: "Tracks how marketing leads are worked by individual reps, showing lead progression through pipeline stages for CMO and RVPs.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Rep-level visibility into how marketing leads are worked and converted.",
@@ -63,6 +65,7 @@ window.PROJECT_DATA = [
     tags: ["Executive Dashboard"],
     impactAreas: ["Funnel Analysis", "Gap Identification", "Executive Reporting"],
     summary: "High-visibility dashboard for CMO, CRO, and CEO that identified a critical gap in the Marketing SAL creation pipeline.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Executive funnel analysis that uncovered a critical pipeline gap.",
@@ -88,6 +91,7 @@ window.PROJECT_DATA = [
     tags: ["Team Enablement App"],
     impactAreas: ["Performance Management", "Coaching", "Analytics"],
     summary: "Consolidated dozens of disparate dashboards into a single cohesive analytics platform for team leadership.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "One platform replacing dozens of dashboards for team performance management.",
@@ -115,6 +119,7 @@ window.PROJECT_DATA = [
     tags: ["Automation Workflow (Apollo.io)"],
     impactAreas: ["Pipeline Generation", "Prospecting Automation"],
     summary: "Automated prospecting engine built in Apollo.io with ICP targeting, daily contact sourcing, and AI-powered personalized email cadences.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "AI-powered prospecting that runs on autopilot.",
@@ -140,6 +145,7 @@ window.PROJECT_DATA = [
     tags: ["Automation Workflow (Gong + Clay)"],
     impactAreas: ["Pipeline Creation", "Sales Acceleration"],
     summary: "Analyzes old opportunities using Gong call summaries to extract use cases and auto-generate templated outreach for reps.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Reviving old opportunities with AI-powered account intelligence.",
@@ -165,6 +171,7 @@ window.PROJECT_DATA = [
     tags: ["Process Improvement"],
     impactAreas: ["Operational Efficiency", "Sales Ops"],
     summary: "Streamlined process that saves ADMs and Sales Ops hours of manual work weekly while improving campaign attribution accuracy.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Eliminating hours of manual data entry every week.",
@@ -192,6 +199,7 @@ window.PROJECT_DATA = [
     tags: ["Coaching & AI Platform"],
     impactAreas: ["Sales Coaching", "Performance Improvement", "Skill Development"],
     summary: "AI-powered platform that scores every Gong call against STC criteria and provides instant feedback with anonymous peer and leader reviews.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "AI-driven call scoring and coaching at scale.",
@@ -478,6 +486,7 @@ window.PROJECT_DATA = [
     tags: ["Intelligence & Sales Ops"],
     impactAreas: ["Org Chart Navigation", "Account Intelligence", "Buying Committee Mapping"],
     summary: "Maps internal and external org hierarchies, engagement history, and buying committees to identify champions and decision-makers.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Visual account intelligence for navigating complex organizations.",
@@ -491,6 +500,160 @@ window.PROJECT_DATA = [
       solution: "Created an account mapping app that visualizes internal team hierarchies, external account org charts, engagement history, and buying committee structures.",
       building: "Details coming soon — describe the technology stack, tools used, and your specific contributions.",
       results: "Enabled reps to quickly identify champions and decision-makers, improving account navigation and reducing time to engage the right stakeholders."
+    },
+    richDetail: {
+      subtitle: "Visualize organizational hierarchies and team relationships within Domo.",
+      heroStats: [
+        { value: "2,100", label: "Lines of Code" },
+        { value: "6", label: "Modules" },
+        { value: "3", label: "Datasets" },
+        { value: "25", label: "Data Fields" }
+      ],
+      sections: [
+        {
+          type: "features",
+          overline: "Overview",
+          title: "Why Command Structure?",
+          subtitle: "Instant clarity on who owns what \u2014 across accounts, teams, and the full revenue org.",
+          cards: [
+            { icon: "\uD83C\uDFE2", title: "Account Hierarchy", description: "Search any customer account and instantly see the assigned AE, ADM, CSM, and SC in a clean org chart layout." },
+            { icon: "\uD83D\uDC65", title: "Revenue Alignment", description: "Look up any team member and view their position in the full revenue hierarchy \u2014 AE, ADM, and SC chains rendered side by side." },
+            { icon: "\uD83D\uDD0D", title: "Multi-Role Detection", description: "Automatically detects all roles a person holds across 22 columns \u2014 IC roles, leadership, or both \u2014 with perspective switching." },
+            { icon: "\uD83D\uDCCA", title: "Interactive D3.js Charts", description: "Org charts built with D3.js v7 featuring hover tooltips, color-coded nodes, and responsive layouts that adapt to any screen." },
+            { icon: "\uD83D\uDCC5", title: "Contact Recency Badges", description: "Each contact node shows days since last interaction. Color-coded: green for recent, red for 14+ days, gray for no data." },
+            { icon: "\u26A1", title: "Built on Domo", description: "Runs natively in Domo with no external infrastructure. Vanilla JavaScript, no build step, no server \u2014 just publish and go." }
+          ]
+        },
+        {
+          type: "three-col",
+          overline: "Views",
+          title: "Two Focused Pages",
+          subtitle: "Each page is purpose-built for a different lookup pattern.",
+          cards: [
+            { icon: "\uD83C\uDFE2", title: "Account Hierarchy", description: "Start from an account and see the full Domo support team assigned to it. Filter by AE to browse account portfolios." },
+            { icon: "\uD83D\uDC65", title: "Revenue Alignment", description: "Start from a person and see their management chain, peers, and direct reports across the AE, ADM, and SC organizations." },
+            { icon: "\uD83D\uDD04", title: "AE Filter + Grid", description: "Select an AE to see all their accounts in a card grid. Click any account card to jump straight to its org chart." }
+          ]
+        },
+        {
+          type: "compare",
+          overline: "Impact",
+          title: "Before & After",
+          headers: ["Task", "Before", "After"],
+          rows: [
+            ["Find who owns an account", "Slack someone, wait for a reply", "Search by account name, instant org chart"],
+            ["See a rep\u2019s full team", "Dig through spreadsheets or SFDC", "Search by name, view full hierarchy"],
+            ["Browse an AE\u2019s book of business", "Run a report, export, filter", "Type AE name, see account grid instantly"],
+            ["Check contact recency", "Cross-reference multiple tools", "Color-coded badges on every contact node"],
+            ["Understand org structure", "Ask around, piece it together", "Visual D3.js hierarchy with role labels"]
+          ]
+        },
+        {
+          type: "workflow",
+          overline: "Workflow",
+          title: "How to Use Command Structure",
+          subtitle: "From opening the app to viewing a full org chart in under 30 seconds.",
+          steps: [
+            { label: "Open App", sublabel: "in Domo" },
+            { label: "Pick a Tab", sublabel: "Account or Revenue" },
+            { label: "Search", sublabel: "account or person" },
+            { label: "View Chart", sublabel: "interactive D3.js" }
+          ]
+        },
+        {
+          type: "steps",
+          overline: "Guide",
+          title: "Getting Started",
+          subtitle: "Five steps to explore org structures.",
+          items: [
+            { title: "Open Command Structure", description: "Launch the app from your Domo dashboard. It automatically detects your user identity and displays your name in the header." },
+            { title: "Choose Your View", description: "Account Hierarchy is the default tab. Click Revenue Alignment to switch views. Data is fetched lazily on first visit to each tab." },
+            { title: "Search for an Account or Person", description: "Start typing in the search bar. Autocomplete suggests matches as you type, limited to 50 results for performance. Click a result to select it." },
+            { title: "Explore the Org Chart", description: "A D3.js org chart renders instantly. On Account Hierarchy, see the account at center with the support team below. On Revenue Alignment, see three parallel chains: AE (center), ADM (left), SC (right)." },
+            { title: "Use AE Filter for Bulk Browsing", description: "On the Account Hierarchy tab, use the AE filter search bar at the top to select an AE. Their accounts appear as a responsive card grid. Click any card to view its org chart." }
+          ]
+        },
+        {
+          type: "callout",
+          title: "Role Detection on Revenue Alignment",
+          content: "When you search for a person, the system scans 22 role columns to detect all roles they hold. If a person appears as both an IC (AE, ADM, SC) and a leader, the IC perspective is shown by default. Role pills let you switch perspectives."
+        },
+        {
+          type: "features",
+          overline: "Platform",
+          title: "Built on Domo Pro-Code",
+          subtitle: "A vanilla JavaScript app that runs entirely client-side inside Domo\u2019s environment with direct access to platform APIs.",
+          cards: [
+            { icon: "\uD83D\uDDA5\uFE0F", title: "No Build Step", description: "Pure HTML, JS, and CSS served directly by Domo. No frameworks, no bundlers, no SSR \u2014 just <script defer> tags sharing global scope." },
+            { icon: "\uD83C\uDF10", title: "D3.js Visualization", description: "Interactive org charts built with D3.js v7. Account Hierarchy uses a radial layout with support team below; Revenue Alignment renders three parallel chains." },
+            { icon: "\uD83D\uDDC3\uFE0F", title: "Domo Datasets", description: "Three datasets mapped via manifest.json aliases. Queried via ryuu.js SDK: domo.get() with lazy loading per tab." },
+            { icon: "\uD83D\uDE80", title: "Deploy Pipeline", description: "Development uses domo dev with a local proxy. Production via domo publish \u2014 no CI/CD pipeline needed." }
+          ]
+        },
+        {
+          type: "tech",
+          overline: "Tech Stack",
+          title: "Simple, Focused Stack",
+          subtitle: "Client-side vanilla JavaScript with D3.js for visualization and Tailwind for styling.",
+          items: [
+            { icon: "\u26A1", title: "Vanilla JavaScript", description: "ES5, no framework, defer loading" },
+            { icon: "\uD83C\uDFA8", title: "TailwindCSS v4", description: "Utility classes via CDN" },
+            { icon: "\uD83D\uDCC8", title: "D3.js v7", description: "Interactive org chart rendering" },
+            { icon: "\uD83D\uDDC3\uFE0F", title: "Domo Datasets", description: "3 datasets via ryuu.js SDK" },
+            { icon: "\uD83D\uDE80", title: "Domo Pro-Code", description: "Platform hosting + deployment" }
+          ]
+        },
+        {
+          type: "timeline",
+          overline: "Build Process",
+          title: "The Build Process",
+          subtitle: "Six versions from initial release to modular architecture.",
+          items: [
+            { phase: "Phase 1", title: "Initial Multi-Page Architecture", description: "Rebranded to \u201CCommand Structure\u201D with COMINT-style tab navigation. Single monolithic app.js serving multiple pages.", pills: ["Tab Navigation", "Vanilla JS", "Tailwind CSS 4"] },
+            { phase: "Phase 2", title: "Account Hierarchy + D3.js", description: "Added the Account Hierarchy page with customer account search and D3.js org chart visualization showing the Domo support team.", pills: ["D3.js v7", "Account Search", "Org Chart"] },
+            { phase: "Phase 3", title: "Revenue Alignment", description: "Built the Revenue Alignment page with three-chain D3.js visualization: AE chain center, ADM chain left, SC chain right.", pills: ["Three-Chain Layout", "25-Field Dataset", "Person Search"] },
+            { phase: "Phase 4", title: "Multi-Role Detection + AE Filter", description: "Extended Revenue Alignment with automatic role detection across 22 columns. Added AE filter with responsive account grid to Account Hierarchy. Contact recency badges.", pills: ["22-Column Scan", "IC > Leader Priority", "AE Account Grid", "Contact Badges"] },
+            { phase: "Phase 5", title: "Architecture Refactor", description: "Split the monolithic 3,155-line app.js into 6 focused modules in js/. Removed ~910 lines of dead code. Zero regressions.", pills: ["6 Modules", "910 Lines Removed", "Global Scope", "Script Defer"] },
+            { phase: "Phase 6", title: "Documentation & Landing Page", description: "Created comprehensive CLAUDE.md project context, README, and a landing page \u2014 all through the same conversational workflow.", pills: ["CLAUDE.md", "Product Page Template", "Domo Design Language"] }
+          ]
+        },
+        {
+          type: "modules",
+          overline: "Architecture",
+          title: "Application Architecture",
+          subtitle: "6 focused modules loaded via <script defer> in dependency order. All share global scope.",
+          depTitle: "Script Loading Order \u2014 defer ensures sequential execution",
+          items: [
+            { name: "state.js", lines: "39", description: "Global state, colors, page routing config" },
+            { name: "utils.js", lines: "42", description: "Shared utilities (validation, formatting, tooltips)" },
+            { name: "navigation.js", lines: "127", description: "Tab switching, user detection, init()" },
+            { name: "account-hierarchy.js", lines: "813", description: "Account Hierarchy: data, search, D3 rendering" },
+            { name: "revenue-alignment.js", lines: "1,115", description: "Revenue Alignment: roles, hierarchy, D3 charts" },
+            { name: "main.js", lines: "3", description: "Entry point \u2014 calls init()" }
+          ],
+          depFlow: [
+            { from: "state.js \u2192 utils.js \u2192 navigation.js", to: "account-hierarchy.js" },
+            { from: "state.js \u2192 utils.js \u2192 navigation.js", to: "revenue-alignment.js" },
+            { from: "main.js", to: "init()" }
+          ]
+        },
+        {
+          type: "data-architecture",
+          overline: "Data Design",
+          title: "Three Dataset Architecture",
+          subtitle: "Each dataset is mapped to an alias in manifest.json and queried via the ryuu.js SDK.",
+          tiers: [
+            { label: "Source", color: "accent", items: [{ title: "hierarchyHub", detail: "8 fields \u00B7 Legacy org data" }, { title: "accountHierarchy", detail: "6 fields \u00B7 Account + team" }, { title: "revenueAlignment", detail: "25 fields \u00B7 AE/ADM/SC chains" }] },
+            { label: "Query", color: "muted", items: [{ title: "ryuu.js SDK", detail: "domo.get('/data/v1/{alias}')" }] },
+            { label: "Render", color: "green", items: [{ title: "Account Hierarchy", detail: "D3.js org chart" }, { title: "Revenue Alignment", detail: "D3.js three-chain chart" }] }
+          ],
+          metrics: [
+            { value: "3", label: "Datasets" },
+            { value: "39", label: "Total Fields" },
+            { value: "2", label: "D3.js Charts" }
+          ]
+        }
+      ]
     }
   },
   {
@@ -503,6 +666,7 @@ window.PROJECT_DATA = [
     tags: ["Compensation Plan Design"],
     impactAreas: ["Team Motivation", "Financial Modeling", "Sales Incentives"],
     summary: "Redesigned ADM compensation plan that increased incentives while maintaining the same cost percentage for the business.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Better incentives, same cost — a win-win comp redesign.",
@@ -528,6 +692,7 @@ window.PROJECT_DATA = [
     tags: ["Intelligence Application (Jupyter)"],
     impactAreas: ["C-Suite Decision-Making", "Strategic Planning"],
     summary: "Jupyter-based application aggregating AI updates, brand health, competitive positioning, customer intelligence, and win/loss analysis for executive decision-making.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Executive-grade market intelligence in one place.",
@@ -541,6 +706,170 @@ window.PROJECT_DATA = [
       solution: "Built a Jupyter-based application that aggregates AI updates, brand health metrics, competitive positioning, customer intelligence, industry trends, market share data, and win/loss analysis.",
       building: "Details coming soon — describe the technology stack, tools used, and your specific contributions.",
       results: "Provided C-suite with a single source of market intelligence, enabling faster strategic decisions backed by comprehensive, up-to-date competitive and market data."
+    },
+    richDetail: {
+      subtitle: "Executive market intelligence dashboard \u2014 8 live reports covering AI updates, brand health, competitive positioning, customer intelligence, and more.",
+      heroStats: [
+        { value: "3,900", label: "Lines of JS" },
+        { value: "5,600", label: "Lines of CSS" },
+        { value: "8", label: "Datasets" },
+        { value: "7", label: "Jupyter Notebooks" }
+      ],
+      sections: [
+        {
+          type: "features",
+          overline: "Overview",
+          title: "Why roosterIQ?",
+          subtitle: "Eight live intelligence reports \u2014 all in one dashboard, always current, fully sourced.",
+          cards: [
+            { icon: "\uD83C\uDF0D", title: "8 Intelligence Types", description: "AI Updates, Brand Health, Competitive Positioning, Customer Intelligence, Industry Trends, Loss Reporting, Market Share, and Market Updates \u2014 all in one unified dashboard." },
+            { icon: "\uD83E\uDD16", title: "AI-Powered Analysis", description: "Jupyter notebooks scrape primary sources, synthesize insights with an LLM, and write structured HTML reports directly to Domo datasets on a scheduled cadence." },
+            { icon: "\uD83D\uDCCB", title: "Clickable Citations", description: "Every insight links back to its primary source. Numbered citation bubbles in report text scroll to detailed source cards \u2014 analyst reports, news articles, and regulatory filings." },
+            { icon: "\uD83D\uDD0D", title: "Global + Modal Search", description: "Search across all 8 report types from the dashboard. A second search engine lives inside each modal \u2014 with match counters, keyboard navigation, and live highlight indicators." },
+            { icon: "\uD83C\uDF19", title: "Dark Mode", description: "Full dark/light theme with a CSS variable design system. One-click toggle persisted to localStorage. All 8 modals, cards, badges, and dropdowns adapt automatically." },
+            { icon: "\u26A1", title: "Native Domo Integration", description: "No server, no build pipeline, no external infrastructure. Runs inside Domo using ryuu.js. Datasets update when notebooks run \u2014 the app reads the latest data on every page load." }
+          ]
+        },
+        {
+          type: "three-col",
+          overline: "Intelligence Categories",
+          title: "Three Lenses on Your Market",
+          subtitle: "Internal customer signals, external competitive moves, and macro market forces \u2014 all synthesized weekly.",
+          cards: [
+            { icon: "\uD83D\uDC64", title: "Internal Intelligence", description: "Customer Intelligence analyzes Gong call recordings for renewal risks and expansion signals. Loss Reporting tracks deal outcomes, churn patterns, and competitive displacement." },
+            { icon: "\uD83D\uDCCA", title: "Competitive & Market", description: "Competitive Positioning tracks competitor moves with NEW badges and impact ratings. Market Share monitors analyst coverage of the BI landscape. Market Updates surfaces macro business signals." },
+            { icon: "\uD83C\uDF10", title: "Ecosystem & Brand", description: "Industry Trends identifies regulatory shifts and technology movements. AI Updates covers model releases and analytics impact. Brand Health monitors sentiment across reviews and analyst coverage." }
+          ]
+        },
+        {
+          type: "compare",
+          overline: "Impact",
+          title: "Before & After",
+          headers: ["Capability", "Before", "After"],
+          rows: [
+            ["Intelligence access", "Manual research, scattered across inboxes", "8 live reports, always current, one dashboard"],
+            ["Competitive awareness", "Quarterly briefings, often stale", "Weekly tracking with NEW badges and impact ratings"],
+            ["Customer risk visibility", "Buried in CRM fields and call notes", "Health scores with week-over-week delta badges"],
+            ["Source credibility", "No citations, hard to verify claims", "Clickable citations linked to primary sources"],
+            ["Report freshness", "No indicator of when data was last updated", "Color-coded freshness badges (Fresh / Recent / Stale)"],
+            ["Report navigation", "Scroll through long documents", "Collapsible sections, expand all, modal search"]
+          ]
+        },
+        {
+          type: "workflow",
+          overline: "Workflow",
+          title: "Using roosterIQ",
+          subtitle: "From dashboard to deep-dive in under a minute.",
+          steps: [
+            { label: "Open Dashboard", sublabel: "in Domo" },
+            { label: "Browse Cards", sublabel: "check freshness badges" },
+            { label: "Search or Click", sublabel: "find specific topics" },
+            { label: "Read Report", sublabel: "executive summary + details" },
+            { label: "Check Sources", sublabel: "click citation bubbles" }
+          ]
+        },
+        {
+          type: "steps",
+          overline: "Guide",
+          title: "Getting Started",
+          subtitle: "From dashboard to deep-dive in five steps.",
+          items: [
+            { title: "Open the Dashboard", description: "Launch roosterIQ from your Domo app catalog. The dashboard loads 8 intelligence cards sorted alphabetically \u2014 AI Updates through Market Updates. Each card shows a freshness badge (green = fresh this week, yellow = 1\u20132 weeks, gray = older)." },
+            { title: "Use the Date Filter", description: "A date selector in the top navigation lets you switch between report generations. If notebooks have run multiple times, you can compare this week\u2019s intelligence to last week\u2019s without re-fetching data." },
+            { title: "Search Across All Reports", description: "Type in the global search bar to filter cards by title, summary, or tag. When exactly one result matches, pressing Enter opens that card\u2019s modal automatically. Match location hints show you where each result was found." },
+            { title: "Open a Report Modal", description: "Click any card to open the full report. The modal header shows an analysis metadata line (period, sources analyzed, date). Use the navigation buttons or arrow keys to move between reports without closing the modal." },
+            { title: "Review Citations & Export", description: "Click any citation bubble to jump to the source card at the bottom of the report. Use the export dropdown to copy the full report, copy just the executive summary, email it, or save as PDF." }
+          ]
+        },
+        {
+          type: "accordion",
+          overline: "Intelligence Types",
+          title: "The 8 Report Types",
+          subtitle: "Click any type to see what data it surfaces and how it\u2019s generated.",
+          items: [
+            { title: "AI Updates", description: "Weekly synthesis of AI model releases and analytics impact for Domo", content: "Tracks top-10 AI developments from analyst firms, tech news, vendor blogs, and policy sources. Each item includes a relevance assessment for Domo (Opportunity / Risk / Watch) with 2-sentence rationale. Delivered as pre-rendered HTML with embedded citations linked to scraped source articles." },
+            { title: "Brand Health", description: "Domo brand perception across analyst coverage, reviews, and media", content: "Monitors 4 brand health themes: overall sentiment, competitive perception, product reputation, and analyst positioning. Pulls from G2/TrustRadius reviews, analyst reports, and media mentions. Uses standardized citation format with numbered source cards." },
+            { title: "Competitive Positioning", description: "Latest moves from key competitors in the BI and analytics market", content: "Tracks up to 8 competitors (Tableau, Power BI, Looker, Sigma, Mode, Qlik, MicroStrategy, ThoughtSpot). Each competitor theme includes a Domo impact badge (High / Medium / Low with rationale), a NEW badge for announcements < 7 days old, and sorted display (High impact first)." },
+            { title: "Customer Intelligence", description: "Renewal risk and expansion signals from Gong call recordings", content: "Analyzes recent customer call transcripts from Gong. Segments accounts into High / Medium / Low renewal risk with week-over-week delta badges showing trend direction. Surfaces dominant risk themes as clickable tag pills." },
+            { title: "Industry Trends", description: "Technology shifts and regulatory movements affecting enterprise software", content: "8 themes covering technology shifts (AI adoption, cloud migration, data governance) and regulatory developments (EU AI Act, CCPA, FTC enforcement). Each strategic implication names a specific Domo product or capability that is directly affected." },
+            { title: "Loss Reporting", description: "Deal outcome analysis, competitive displacement, and churn patterns", content: "Quarterly analysis of closed-lost deals from CRM and Gong data. Seven HTML sections: executive overview, win analysis, loss analysis with top reasons, competitive displacement, churn patterns, strategic recommendations, and a deal-level appendix." },
+            { title: "Market Share", description: "Analyst-sourced BI market share trends and Domo positioning evidence", content: "4 themes synthesizing analyst reports from Gartner, Forrester, IDC, and G2. Each Domo positioning section includes 2\u20133 specific evidence points (analyst quotes, benchmark data, review site scores) rather than general assertions." },
+            { title: "Market Updates", description: "Latest business news, M&A activity, and regulatory shifts", content: "Weekly top-10 market developments covering economic conditions, M&A/funding activity, regulatory shifts, and enterprise software trends. Sources span WSJ Markets, Reuters, Bloomberg, SEC/FTC newsrooms, and Crunchbase." }
+          ]
+        },
+        {
+          type: "callout",
+          title: "Keyboard Shortcuts",
+          content: "Cmd/Ctrl + F \u2014 Focus global search \u00B7 \u2191 / \u2193 \u2014 Navigate search results \u00B7 Enter \u2014 Open modal when 1 result \u00B7 \u2190 / \u2192 \u2014 Navigate between modals \u00B7 ESC \u2014 Clear modal search / close modal \u00B7 Cmd + Shift + D \u2014 Toggle dark mode"
+        },
+        {
+          type: "features",
+          overline: "Stack",
+          title: "Built on Domo Pro-Code",
+          subtitle: "A vanilla JS SPA inside Domo with LLM-powered Jupyter notebooks doing the intelligence work.",
+          cards: [
+            { icon: "\uD83D\uDDA5\uFE0F", title: "Vanilla JS SPA", description: "ES5-compatible JavaScript \u2014 no framework, no TypeScript, no build step. Everything lives in app.js, app.css, and index.html. Domo serves the static files directly." },
+            { icon: "\uD83D\uDDC3\uFE0F", title: "Domo SDK (ryuu.js)", description: "8 datasets fetched in parallel via Promise.all() at page load. All dataset IDs and field mappings defined in manifest.json. No API keys \u2014 authentication via Domo session." },
+            { icon: "\uD83E\uDD16", title: "Jupyter + LLM Pipeline", description: "7 notebooks run on schedule inside Domo Jupyter. Each scrapes primary sources, chunks the content, calls an LLM for synthesis and citation tagging, and writes a structured HTML row to its dataset." },
+            { icon: "\uD83C\uDFA8", title: "CSS Variable Design System", description: "All brand colors, spacing, z-index, shadows, and dark mode surfaces defined as CSS variables in :root. One toggle class (body.dark-mode) switches the entire UI." }
+          ]
+        },
+        {
+          type: "timeline",
+          overline: "Development",
+          title: "How It Was Built",
+          subtitle: "Four phases across the app and pipeline.",
+          items: [
+            { phase: "Phase 1", title: "Core Dashboard", description: "Built the 8-card unified dashboard with alphabetical sorting, freshness badges, skeleton loading states, dark mode, date filter, and modal navigation system (prev/next with keyboard shortcuts).", pills: ["SPA Architecture", "8 Modals", "Dark Mode", "Skeleton Loading", "Date Filter"] },
+            { phase: "Phase 2", title: "Jupyter Pipeline", description: "Created 7 Jupyter notebooks for all intelligence types. Each follows a 3-stage pattern: scrape sources \u2192 LLM synthesis with {{cite:N}} citations \u2192 convert to HTML with source cards.", pills: ["7 Notebooks", "LLM Synthesis", "Citation System", "Web Scraping"] },
+            { phase: "Phase 3", title: "Modal UX Improvements", description: "Added modal metadata line, Expand All / Collapse All button, CI delta badges, Competitive Positioning NEW badges and impact sorting, 4-option export dropdown, and search UX with Enter-to-open and match location hints.", pills: ["Delta Badges", "NEW Badges", "Export Dropdown", "Search Hints", "Metadata Line"] },
+            { phase: "Phase 4", title: "CSS Polish", description: "Consolidated dark mode to 3 surface variables, added missing CSS variables, added tablet breakpoint at 900px, and rewrote the Styling Guide to document the actual vanilla CSS system.", pills: ["CSS Variables", "Dark Mode Consolidation", "Tablet Breakpoint", "Styling Guide"] }
+          ]
+        },
+        {
+          type: "modules",
+          overline: "Architecture",
+          title: "File Structure",
+          subtitle: "A flat project \u2014 no subdirectories, no bundler, everything served directly by Domo.",
+          items: [
+            { name: "app.js", lines: "3,900", description: "Main application \u2014 data loading, card rendering, all 8 modals, search, dark mode, export" },
+            { name: "app.css", lines: "5,600", description: "Complete styling system \u2014 CSS variables, 17+ sections, dark mode, responsive breakpoints" },
+            { name: "index.html", lines: "Static", description: "Static structure with empty containers \u2014 all content injected by JavaScript at runtime" },
+            { name: "manifest.json", lines: "8 datasets", description: "Domo app config \u2014 dataset IDs, field aliases, app version, size constraints" },
+            { name: "jupyter/", lines: "7 notebooks", description: "Intelligence pipelines \u2014 customer_intelligence, competitive_positioning, ai_updates, market_updates, brand_health, industry_trends, market_share" },
+            { name: "*Light.png / *Dark.png", lines: "16 files", description: "Theme-aware logos for each intelligence card \u2014 automatically switch on dark mode toggle" }
+          ]
+        },
+        {
+          type: "pipeline",
+          overline: "Intelligence Pipeline",
+          title: "How Reports Are Generated",
+          subtitle: "Every notebook follows the same 3-stage pattern from web sources to rendered HTML.",
+          stages: [
+            { icon: "\uD83C\uDF10", title: "Scrape Sources", description: "LLM extracts article URLs from homepages; each article is scraped and chunked" },
+            { icon: "\uD83E\uDD16", title: "LLM Synthesis", description: "Top developments ranked and written with {{cite:N}} citation tags" },
+            { icon: "\uD83D\uDCBB", title: "Citation Conversion", description: "Tags converted to HTML bubbles; source cards generated with title, URL, date" },
+            { icon: "\uD83D\uDCBE", title: "Write to Domo", description: "data.replace() overwrites the dataset with the latest report row" },
+            { icon: "\uD83D\uDCCA", title: "App Renders", description: "Card appears with fresh badge; modal displays pre-rendered HTML with live citations" }
+          ]
+        },
+        {
+          type: "data-architecture",
+          overline: "Data Design",
+          title: "Data Architecture",
+          subtitle: "Notebooks write HTML; the app reads it. No transformation layer, no API.",
+          tiers: [
+            { label: "Write", color: "accent", items: [{ title: "Jupyter Notebook", detail: "LLM synthesis + HTML generation" }, { title: "Domo Dataset", detail: "1 row \u2014 latest report" }] },
+            { label: "Fetch", color: "muted", items: [{ title: "Promise.all()", detail: "8 datasets in parallel on page load" }] },
+            { label: "Render", color: "green", items: [{ title: "Dashboard Cards", detail: "title, summary, tag, freshness badge" }, { title: "Modal Detail View", detail: "pre-rendered HTML with live citations" }] }
+          ],
+          metrics: [
+            { value: "8", label: "Datasets" },
+            { value: "7", label: "Notebooks" },
+            { value: "8", label: "Modal Types" }
+          ]
+        }
+      ]
     }
   },
   {
@@ -553,6 +882,7 @@ window.PROJECT_DATA = [
     tags: ["Team Enablement Tool"],
     impactAreas: ["Team Motivation", "Compensation Transparency"],
     summary: "Tool that models monthly earnings and commission scenarios, improving ADM transparency and motivation.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Transparent earnings modeling for the team.",
@@ -578,6 +908,7 @@ window.PROJECT_DATA = [
     tags: ["Enablement Tool (Automation)"],
     impactAreas: ["Sales Efficiency", "Meeting Readiness"],
     summary: "Automated pre-discovery account intelligence that improves meeting readiness for ADMs and Sales.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Automated account research so reps come prepared.",
@@ -603,6 +934,7 @@ window.PROJECT_DATA = [
     tags: ["Team Enablement Tool"],
     impactAreas: ["Upsell & Cross-sell Acceleration"],
     summary: "Data-backed use case prioritization tool leveraged by the upsell team for expansion conversations.",
+    company: "Domo",
     featured: false,
     detail: {
       tagline: "Data-driven expansion recommendations for every account.",
@@ -630,6 +962,7 @@ window.PROJECT_DATA = [
     tags: ["Strategic Initiative (Cross-Functional)"],
     impactAreas: ["Funnel Optimization", "Revenue Growth", "Product Intelligence"],
     summary: "Led a cross-functional transformation of the trial experience, dramatically improving onboarding scheduling, attendance, and conversion rates.",
+    company: "Domo",
     featured: true,
     detail: {
       tagline: "Cross-functional transformation of the free trial experience.",

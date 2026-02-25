@@ -233,7 +233,12 @@
         });
         var tagsRow = el('div', { className: 'detail-tags' }, tagEls);
 
-        var header = el('div', { className: 'detail-header' }, [title, tagline, tagsRow]);
+        var headerChildren = [title, tagline];
+        if (project.company) {
+            headerChildren.push(el('p', { className: 'detail-company', textContent: project.company }));
+        }
+        headerChildren.push(tagsRow);
+        var header = el('div', { className: 'detail-header' }, headerChildren);
 
         // Metrics
         var metricCards = project.detail.metrics.map(function (m) {
@@ -329,11 +334,15 @@
             tagEls.push(el('span', { className: 'category-tag', textContent: t }));
         });
 
-        children.push(el('div', { className: 'detail-header' }, [
+        var richHeaderChildren = [
             el('h1', { className: 'detail-title', tabindex: '-1', textContent: project.title }),
-            el('p', { className: 'detail-tagline', textContent: rd.subtitle || project.detail.tagline }),
-            el('div', { className: 'detail-tags' }, tagEls)
-        ]));
+            el('p', { className: 'detail-tagline', textContent: rd.subtitle || project.detail.tagline })
+        ];
+        if (project.company) {
+            richHeaderChildren.push(el('p', { className: 'detail-company', textContent: project.company }));
+        }
+        richHeaderChildren.push(el('div', { className: 'detail-tags' }, tagEls));
+        children.push(el('div', { className: 'detail-header' }, richHeaderChildren));
 
         // Hero stats
         if (rd.heroStats && rd.heroStats.length) {
@@ -573,6 +582,35 @@
                 ]);
             }
 
+            case 'accordion': {
+                var accordionChildren = [];
+                section.items.forEach(function (item, idx) {
+                    var card = el('div', { className: 'rich-rubric' });
+                    var headerInner = [
+                        el('div', { className: 'rich-rubric-num', textContent: String(idx + 1) }),
+                        el('div', { className: 'rich-rubric-title' }, [
+                            el('h3', { textContent: item.title }),
+                            el('p', { textContent: item.description })
+                        ]),
+                        svgEl(['M6 9l6 6 6-6'], 'rich-rubric-toggle')
+                    ];
+                    var header = el('div', { className: 'rich-rubric-header' }, headerInner);
+                    header.addEventListener('click', function () {
+                        card.classList.toggle('open');
+                    });
+                    card.appendChild(header);
+                    var body = el('div', { className: 'rich-rubric-body' }, [
+                        el('p', { textContent: item.content, style: { fontSize: '14px', lineHeight: '1.6' } })
+                    ]);
+                    card.appendChild(body);
+                    accordionChildren.push(card);
+                });
+                return el('div', { className: 'rich-section' + (isAlt ? ' rich-section-alt' : '') }, [
+                    buildRichSectionHeader(section),
+                    el('div', { className: 'rich-rubric-list' }, accordionChildren)
+                ]);
+            }
+
             case 'modules': {
                 var moduleCards = section.items.map(function (m) {
                     return el('div', { className: 'rich-module-card' }, [
@@ -597,7 +635,7 @@
                         ]);
                     });
                     var depFlow = el('div', { className: 'rich-dep-flow' }, [
-                        el('div', { className: 'rich-dep-title', textContent: 'Dependency Injection \u2014 No Circular Imports' })
+                        el('div', { className: 'rich-dep-title', textContent: section.depTitle || 'Dependency Injection \u2014 No Circular Imports' })
                     ].concat(flowRows));
                     sectionChildren.push(depFlow);
                 }

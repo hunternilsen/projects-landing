@@ -602,8 +602,16 @@ h1, h2, h3, h4, h5, h6 {
 .project-title {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   letter-spacing: -0.01em;
+}
+
+.card-company {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
 }
 
 .card-tags {
@@ -774,6 +782,13 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 700px;
 }
 
+.detail-company {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
 .detail-tags {
   display: flex;
   flex-wrap: wrap;
@@ -853,67 +868,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 6px;
   border-radius: 50%;
   background: var(--color-accent);
-}
-
-/* ── Contact Section ── */
-.contact-section {
-  padding: 80px 0;
-  background: var(--color-surface);
-}
-
-.contact-inner {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-inner h2 {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 12px;
-}
-
-.contact-text {
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--color-text-secondary);
-  margin-bottom: 32px;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.contact-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--color-text);
-  padding: 14px 24px;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  transition: border-color 0.2s, box-shadow 0.2s, color 0.2s;
-}
-
-.contact-link:hover {
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-md);
-  color: var(--color-accent);
-}
-
-.contact-link svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  flex-shrink: 0;
 }
 
 /* ── Footer ── */
