@@ -234,8 +234,11 @@
         var tagsRow = el('div', { className: 'detail-tags' }, tagEls);
 
         var headerChildren = [title, tagline];
-        if (project.company) {
-            headerChildren.push(el('p', { className: 'detail-company', textContent: project.company }));
+        var metaLine = [];
+        if (project.dateLabel) metaLine.push(project.dateLabel);
+        if (project.company) metaLine.push(project.company);
+        if (metaLine.length) {
+            headerChildren.push(el('p', { className: 'detail-company', textContent: metaLine.join(' · ') }));
         }
         headerChildren.push(tagsRow);
         var header = el('div', { className: 'detail-header' }, headerChildren);
@@ -338,8 +341,11 @@
             el('h1', { className: 'detail-title', tabindex: '-1', textContent: project.title }),
             el('p', { className: 'detail-tagline', textContent: rd.subtitle || project.detail.tagline })
         ];
-        if (project.company) {
-            richHeaderChildren.push(el('p', { className: 'detail-company', textContent: project.company }));
+        var richMetaLine = [];
+        if (project.dateLabel) richMetaLine.push(project.dateLabel);
+        if (project.company) richMetaLine.push(project.company);
+        if (richMetaLine.length) {
+            richHeaderChildren.push(el('p', { className: 'detail-company', textContent: richMetaLine.join(' · ') }));
         }
         richHeaderChildren.push(el('div', { className: 'detail-tags' }, tagEls));
         children.push(el('div', { className: 'detail-header' }, richHeaderChildren));
@@ -899,34 +905,34 @@
 
     function setupIntersectionObserver() {
         var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        var cards = document.querySelectorAll('#view-home .project-card');
+        var rows = document.querySelectorAll('#view-home .project-card');
 
         if (prefersReducedMotion) {
-            cards.forEach(function (card) {
-                card.style.opacity = '1';
-                card.style.transform = 'none';
+            rows.forEach(function (row) {
+                row.style.opacity = '1';
+                row.style.transform = 'none';
             });
             return;
         }
 
-        // Hide cards before observing so animation goes 0→1 without flash
-        cards.forEach(function (card) {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(24px)';
+        // Hide rows before observing
+        rows.forEach(function (row) {
+            row.style.opacity = '0';
+            row.style.transform = 'translateY(12px)';
         });
 
-        var options = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        var options = { threshold: 0.05, rootMargin: '0px 0px -30px 0px' };
 
         var sections = document.querySelectorAll('#view-home .project-category');
         sections.forEach(function (section) {
-            var sectionCards = section.querySelectorAll('.project-card');
+            var sectionRows = section.querySelectorAll('.project-card');
             var observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
-                        Array.from(sectionCards).forEach(function (card, i) {
+                        Array.from(sectionRows).forEach(function (row, i) {
                             setTimeout(function () {
-                                card.classList.add('fade-in-up');
-                            }, i * 80);
+                                row.classList.add('fade-in-up');
+                            }, i * 60);
                         });
                         observer.unobserve(entry.target);
                     }

@@ -574,51 +574,69 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--color-border);
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* ── Project Card ── */
-.project-card {
-  background: var(--color-surface);
-  border-radius: var(--radius);
-  padding: 28px;
+.projects-list {
   display: flex;
   flex-direction: column;
-  border-left: 3px solid transparent;
-  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+/* ── Project Row ── */
+.project-card {
+  display: flex;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.2s;
+}
+
+.project-card:last-child {
+  border-bottom: none;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-left-color: var(--color-accent);
+  background: var(--color-surface);
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: var(--radius-sm);
 }
 
 .project-card.hidden { display: none !important; }
 
-.project-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 4px;
-  letter-spacing: -0.01em;
+.row-date {
+  flex-shrink: 0;
+  width: 76px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding-top: 3px;
 }
 
-.card-company {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--color-text-muted);
-  margin-bottom: 12px;
+.row-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.project-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .card-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .role-badge {
@@ -652,8 +670,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   line-height: 1.6;
   color: var(--color-text-secondary);
-  margin-bottom: 20px;
-  flex: 1;
 }
 
 .card-link {
@@ -661,9 +677,10 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 6px;
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--color-accent);
+  white-space: nowrap;
   transition: gap 0.2s;
 }
 .card-link:hover {
@@ -671,69 +688,46 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-accent-dark);
 }
 .card-link svg {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   fill: currentColor;
   transition: transform 0.2s;
 }
 .card-link:hover svg { transform: translateX(2px); }
 
-/* Category icons on cards */
-.card-category-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  background: var(--color-accent-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 14px;
-  flex-shrink: 0;
-}
-
-.card-category-icon svg {
-  width: 18px;
-  height: 18px;
-  stroke: var(--color-accent);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* Featured card */
+/* Featured row */
 .project-card.featured {
-  grid-column: 1 / -1;
   background: var(--color-accent-bg);
-  border: 1px solid var(--color-accent-light);
-  border-left: 4px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent-light);
+  border-left: 3px solid var(--color-accent);
+  padding-left: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-right: 16px;
+  border-radius: var(--radius-sm);
 }
 
 .project-card.featured:hover {
-  border-left-color: var(--color-accent-dark);
+  background: var(--color-accent-bg);
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* Inline stats for featured row */
+.row-stats {
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-border);
+  margin-top: 10px;
 }
 
-.stat-value {
+.row-stat {
   font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 600;
   color: var(--color-accent);
-}
-
-.stat-label {
-  font-size: 12px;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  padding: 3px 12px;
+  background: var(--color-bg);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-accent-light);
 }
 
 /* ── Project Detail View ── */
@@ -935,8 +929,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Animations ── */
 .fade-in-up {
   opacity: 0;
-  transform: translateY(24px);
-  animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform: translateY(12px);
+  animation: fadeInUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes fadeInUp {
@@ -960,10 +954,6 @@ a:focus-visible {
 
 /* ── Responsive: Tablet ── */
 @media (max-width: 992px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .detail-metrics {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1000,12 +990,28 @@ a:focus-visible {
     gap: 24px;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  /* Compact rows: stack date above content on mobile */
+  .project-card {
+    flex-direction: column;
+    gap: 4px;
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .row-date {
+    width: auto;
+  }
+
+  .row-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .row-stats {
+    gap: 8px;
+  }
+
+  .row-stat {
+    font-size: 12px;
   }
 
   .detail-metrics {
@@ -2065,16 +2071,15 @@ a:focus-visible {
   .exp-edu-card { box-shadow: none; border: 1px solid #ddd; }
 
   .projects-section { padding: 20px 0; }
-  .projects-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
 
   .project-card {
-    border: 1px solid #ddd;
-    border-left: 3px solid var(--color-accent);
+    border-bottom: 1px solid #ddd;
     break-inside: avoid;
-    box-shadow: none;
   }
 
-  .project-card.featured { grid-column: 1 / -1; }
+  .project-card.featured {
+    border-left: 3px solid var(--color-accent);
+  }
 
   .detail-view { padding: 20px 0; }
   .detail-metrics { grid-template-columns: repeat(4, 1fr); }

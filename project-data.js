@@ -6,6 +6,8 @@ window.PROJECT_DATA = [
   {
     slug: "pipeline-management-dashboard",
     title: "Pipeline Management Dashboard",
+    date: "2025-04",
+    dateLabel: "Apr 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "dashboards",
@@ -32,6 +34,8 @@ window.PROJECT_DATA = [
   {
     slug: "ae-inbound-conversion-dashboard",
     title: "AE Inbound Conversion Dashboard",
+    date: "2025-06",
+    dateLabel: "Jun 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "dashboards",
@@ -58,6 +62,8 @@ window.PROJECT_DATA = [
   {
     slug: "marketing-sal-creation-dashboard",
     title: "Marketing SAL Creation Dashboard",
+    date: "2025-08",
+    dateLabel: "Aug 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "dashboards",
@@ -84,6 +90,8 @@ window.PROJECT_DATA = [
   {
     slug: "consolidated-team-leadership-app",
     title: "Consolidated Team & Leadership App",
+    date: "2025-09",
+    dateLabel: "Sep 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "dashboards",
@@ -112,6 +120,8 @@ window.PROJECT_DATA = [
   {
     slug: "ai-outbound-engine",
     title: "AI Outbound Engine",
+    date: "2026-02",
+    dateLabel: "Feb 2026",
     role: "revops",
     roleLabel: "RevOps Analyst",
     category: "automation",
@@ -138,6 +148,8 @@ window.PROJECT_DATA = [
   {
     slug: "clay-old-opportunity-workflow",
     title: "Clay Old Opportunity Workflow",
+    date: "2025-10",
+    dateLabel: "Oct 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "automation",
@@ -164,6 +176,8 @@ window.PROJECT_DATA = [
   {
     slug: "sgl-bulk-upload-process",
     title: "SGL Bulk Upload Process",
+    date: "2025-05",
+    dateLabel: "May 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "automation",
@@ -192,6 +206,8 @@ window.PROJECT_DATA = [
   {
     slug: "call-review-coaching-app",
     title: "Call Review & Coaching App",
+    date: "2026-01",
+    dateLabel: "Jan 2026",
     role: "revops",
     roleLabel: "RevOps Analyst",
     category: "enablement",
@@ -479,6 +495,8 @@ window.PROJECT_DATA = [
   {
     slug: "account-mapping-app",
     title: "Account Mapping App",
+    date: "2026-01",
+    dateLabel: "Jan 2026",
     role: "revops",
     roleLabel: "RevOps Analyst",
     category: "enablement",
@@ -659,6 +677,8 @@ window.PROJECT_DATA = [
   {
     slug: "new-adm-comp-plan",
     title: "New ADM Comp Plan",
+    date: "2025-12",
+    dateLabel: "Dec 2025",
     role: "revops",
     roleLabel: "RevOps Analyst",
     category: "enablement",
@@ -685,6 +705,8 @@ window.PROJECT_DATA = [
   {
     slug: "market-intelligence-app",
     title: "Market Intelligence App",
+    date: "2026-02",
+    dateLabel: "Feb 2026",
     role: "revops",
     roleLabel: "RevOps Analyst",
     category: "enablement",
@@ -875,6 +897,8 @@ window.PROJECT_DATA = [
   {
     slug: "commission-calculator",
     title: "Commission Calculator",
+    date: "2025-03",
+    dateLabel: "Mar 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "enablement",
@@ -901,6 +925,8 @@ window.PROJECT_DATA = [
   {
     slug: "account-research-agent",
     title: "Account Research Agent",
+    date: "2025-07",
+    dateLabel: "Jul 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "enablement",
@@ -927,6 +953,8 @@ window.PROJECT_DATA = [
   {
     slug: "next-best-use-case-tool",
     title: "Next Best Use Case Tool",
+    date: "2025-09",
+    dateLabel: "Sep 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "enablement",
@@ -955,6 +983,8 @@ window.PROJECT_DATA = [
   {
     slug: "free-trial-growth-initiative",
     title: "Free Trial Growth Initiative",
+    date: "2025-11",
+    dateLabel: "Nov 2025",
     role: "adops",
     roleLabel: "AD Ops Analyst",
     category: "strategic",
