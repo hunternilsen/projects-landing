@@ -622,9 +622,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
 }
 
-/* Hide tags in list view — visible in detail pages */
+/* Tags visible in list view */
 .projects-list .card-tags {
-  display: none;
+  margin-bottom: 4px;
 }
 
 .role-badge {
@@ -683,20 +683,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .card-link:hover svg { transform: translateX(2px); }
 
-/* Draft badge */
-.draft-badge {
-  font-family: var(--font-heading);
-  font-size: 10px;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  padding: 1px 6px;
-  border-radius: var(--radius-full);
-  margin-left: 8px;
-}
-
-/* Inline stats for featured row */
+/* Inline stats for row */
 .row-stats {
   display: flex;
   flex-wrap: wrap;
